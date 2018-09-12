@@ -53,3 +53,7 @@ function getBranches(el) {
   req.open('GET', `https://api.github.com/repos/${document.getElementById('username').value}/` + name + '/branches');
   req.send();
 }
+
+function displayBranches() {
+
+}
