@@ -7,7 +7,6 @@ function getRepositories() {
 
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
-  console.log(repos[0])
   const repoList = `<ul>${repos
     .map(
       r =>
@@ -24,7 +23,6 @@ function displayRepositories() {
 
 function getCommits(el) {
   const name = el.dataset.repository;
-
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
   req.open('GET', `https://api.github.com/repos/${document.getElementById('username').value}/` + name + '/commits');
