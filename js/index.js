@@ -34,7 +34,6 @@ function displayCommits() {
   const commitsList = `<ul>${commits
     .map(
       commit =>
-      console.log(commit.commit.author.name)
         '<li><strong>' +
         commit.author.login +
         '</strong> - ' +
