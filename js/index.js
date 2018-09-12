@@ -55,5 +55,18 @@ function getBranches(el) {
 }
 
 function displayBranches() {
+  const commits = JSON.parse(this.responseText);
+  console.log(commits[0].commit.author.name)
+  const commitsList = `<ul>${commits
+    .map(
+      commit =>
+        '<li><strong>' +
+        commit.author.login +
+        '</strong> - ' +
+        `${commit.commit.message}` + `- ${commit.commit.author.name}` +
+        '</li>'
+    )
+    .join('')}</ul>`;
+  document.getElementById('details').innerHTML = commitsList;
 
 }
