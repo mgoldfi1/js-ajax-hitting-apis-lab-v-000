@@ -44,3 +44,12 @@ function displayCommits() {
     .join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
 }
+
+function getBranches(el) {
+  console.log(el)
+  const name = el.dataset.repository;
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', displayCommits);
+  req.open('GET', `https://api.github.com/repos/${document.getElementById('username').value}/` + name + '/commits');
+  req.send();
+}
