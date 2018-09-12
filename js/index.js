@@ -64,6 +64,6 @@ function displayBranches() {
         '</strong></li>'
     )
     .join('')}</ul>`;
-  document.getElementById('details').innerHTML = commitsList;
+  document.getElementById('details').innerHTML = branchesList;
 
 }
