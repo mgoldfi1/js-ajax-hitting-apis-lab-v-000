@@ -31,7 +31,7 @@ function getCommits(el) {
 
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
-  console.log(commits[0])
+  console.log(commits[0].author.name)
   const commitsList = `<ul>${commits
     .map(
       commit =>
