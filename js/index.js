@@ -55,8 +55,7 @@ function getBranches(el) {
 }
 
 function displayBranches() {
-  const commits = JSON.parse(this.responseText);
-  console.log(commits[0].commit.author.name)
+  const branches = JSON.parse(this.responseText);
   const commitsList = `<ul>${commits
     .map(
       commit =>
