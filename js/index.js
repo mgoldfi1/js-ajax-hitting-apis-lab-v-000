@@ -60,10 +60,8 @@ function displayBranches() {
     .map(
       branch =>
         '<li><strong>' +
-        commit.author.login +
-        '</strong> - ' +
-        `${commit.commit.message}` + `- ${commit.commit.author.name}` +
-        '</li>'
+        branch.name +
+        '</strong></li>'
     )
     .join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
